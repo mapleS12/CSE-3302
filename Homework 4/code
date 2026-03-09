@@ -1,0 +1,36 @@
+
+
+
+
+// <expr> ::= <term> "+" <expr> | <term>
+void parser(){
+    term();
+    if (token == "+"){
+        match("+");
+        parser();
+    }
+}
+
+
+
+// <term> ::= <factor> "*" <term> | <factor>
+void parser(){
+    factor();
+    if (token == "*"){
+        match("*")
+        parser();
+    }
+}
+
+
+
+// <factor> ::= "id" | "(" <expr> ")"
+void factor(){
+    if (token =="id"){
+        match("id");
+    }else if(token == "("){
+        match("(");
+        parser();
+        match(")");
+    }
+}
