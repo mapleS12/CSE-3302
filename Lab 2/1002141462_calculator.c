@@ -36,8 +36,7 @@ double getnum(const char *param){
 char inputSymbol(){
     char input;
     while(1){
-        printf("Enter t
-            he symbol (+, -, *,/): ): ");
+        printf("Enter the symbol (+, -, *,/): ): ");
         scanf(" %c", &input);
         if(input =='+'||input =='-'||input =='*'||input =='/') {
             return input;
